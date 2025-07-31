@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Card from './components/Card';
 
 function App() {
+
+  const [filter, setFilter] = useState('all')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <div className='page-wrapper'>
+      <div className='hero-image'></div>
+      <div className="container">
+
+        <div className='container-text'>
+          <h2>Our Collection</h2>
+          <p>Introducing our Coffee Collection, a selection of unique coffees
+            from different roast types and origins, expertly roasted in small
+            batches and shipped fresh weekly.</p>
+        </div>
+
+        <div className='container-button'>
+          <button onClick={() => setFilter('all')}>All products</button>
+          <button onClick={() => setFilter('available')}>Available now</button>
+        </div>
+
+        <div className="card-grid">
+          <Card filter={filter} />
+        </div>
+      </div>
+    </div >
   );
 }
 

@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+/* main background */
+body,
+html {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* main container */
+.container {
+  background-color: #1B1D1F;
+  color: #FEF7EE;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding-bottom: 3rem;
+}
+
+
+.container-text {
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.container-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.container-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6F757C;
+
+}
+
+.container-button {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-button button {
+  background-color: #6F757C;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 0.75rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container-button button:hover {
+  background-color: #1B1D1F;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  justify-items: center;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.card-image-wrapper img {
+  border-radius: 12px;
+}
+
+.popular-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #F6C768;
+  color: #111315;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.price-tag {
+  background-color: #BEE3CC;
+  border-radius: 3px;
+  color: #1B1D1F;
+  padding: 0.2rem 0.5rem;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.out-of-stock-tag {
+  color: #ED735D;
 }
