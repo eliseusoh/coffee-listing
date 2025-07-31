@@ -2,6 +2,7 @@
 
 Welcome to the **Coffee Listing App** — a sleek, responsive React application that showcases a curated list of coffee products with filtering options and stylish UI. Built with ❤️ for coffee lovers and frontend enthusiasts.
 
+
 <img width="960" height="534" alt="image" src="https://github.com/user-attachments/assets/bb0ae2a1-f0cd-4cb4-bd07-d715ee2faa87" />
 
 
